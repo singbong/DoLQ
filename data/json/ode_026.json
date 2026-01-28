@@ -1,0 +1,39 @@
+{
+  "ode_id": 26,
+  "name": "Lotka-Volterra competition model (Strogatz version for sheep and rabbits)",
+  "dimension": 2,
+  "description": "Two species are conceived as sharing a limited environment, where each population influences the other through competition for resources, leading to expected cyclical changes in their densities as dominance alternates over time.",
+  "category": "Population Dynamics / Ecology",
+  "equation": {
+    "python": [
+      "x0 * (c0 - c1 * x1 - x0)",
+      "x1 * (c2 - x0 - x1)"
+    ]
+  },
+  "parameters": {
+    "c0": 3.0,
+    "c1": 2.0,
+    "c2": 2.0
+  },
+  "initial_conditions": [
+    [
+      5.0,
+      4.3
+    ],
+    [
+      2.3,
+      3.6
+    ]
+  ],
+  "time_domain": {
+    "t_start": 0.0,
+    "t_end": 2.0,
+    "t_ood_end": 4.0,
+    "dt": 0.005
+  },
+  "references": [
+    "https://en.wikipedia.org/wiki/Lotka%E2%80%93Volterra_equations",
+    "https://mbe.modelica.university/behavior/equations/population/",
+    "https://mc-stan.org/learn-stan/case-studies/lotka-volterra-predator-prey.html"
+  ]
+}
