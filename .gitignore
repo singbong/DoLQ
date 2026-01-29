@@ -12,4 +12,7 @@ __pycache__/*
 
 logs/*
 
+# Run bash scripts directory
+run_bash/
+
 
